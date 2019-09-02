@@ -1,0 +1,13 @@
+.list-container{
+    display: flex;
+    flex: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list-item{
+    justify-content: space-around;
+    margin: 8px;
+    box-shadow: 2px 2px grey;
+    border-radius: 5px;
+}

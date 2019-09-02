@@ -1,0 +1,16 @@
+<h1>Home</h1>
+<p>You`re logged in with Angular 8 & JWT</p>
+<div>
+    Users from secure api and point:
+    <ul>
+        <li *ngFor="let user of users$ | async">
+            {{user.firstName}} {{user.lastName}}
+        </li>
+    </ul>
+    <user-form (setNewUser)="setNewUser($event)"></user-form>
+    <div class="card">
+        <pre class="card-body" *ngIf="newUser"> {{ newUser | json }}</pre> 
+    </div>      
+    <button class="btn" (click)="getUsers()">Get users</button>
+    <pre>{{ users | json }}</pre>
+</div>

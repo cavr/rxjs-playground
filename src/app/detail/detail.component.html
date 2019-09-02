@@ -1,0 +1,6 @@
+<a [routerLink]="['/marvel']" routerLinkActive="router-link-active">Back</a>
+ <div *ngFor="let item of (detail$ | async)?.results ">  
+   <h3>{{item.primaryGenreName}}</h3>
+   {{item | json}}
+   </div>
+
