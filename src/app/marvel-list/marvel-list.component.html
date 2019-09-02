@@ -1,0 +1,14 @@
+<div>
+<form [formGroup]="marvelForm" >
+  <div class="form-group">
+          <label for="search">Search</label>
+          <input type="text" formControlName="search" class="form-control"  />         
+      </div>
+    </form>
+  </div>
+
+  <div class="list-container">
+  <div  class="list-item" *ngFor="let item of marvelResult | async as list">
+  <img [src]="item.artworkUrl100.replace('100x100', '600x600')" width="300" height="300" [routerLink]="['/detail', item.artistId]"  routerLinkActive="router-link-active" />
+  </div>
+</div>
